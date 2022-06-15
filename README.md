@@ -33,12 +33,6 @@ OUTPUT:
 
 
 4.Develop a program to convert color strings to RGB color values<br>
-from PIL import Image<br>
-img=Image.new('RGB',(200,400),(255,255,0))<br>
-img.show()<br>
-OUTPUT:
-![image](https://user-images.githubusercontent.com/97940064/173815528-dc64c021-01d9-4cb7-8b9c-bac8456ee96f.png)
-
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
