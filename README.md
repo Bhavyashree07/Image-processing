@@ -27,7 +27,7 @@ img=img.rotate(180)<br>
 img.show()<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
-OUTPUT:
+OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/97940064/173813524-b5019ad7-5079-4772-b171-1edb21823f66.png)
 
 
@@ -38,7 +38,7 @@ img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
 img2=ImageColor.getrgb("red")<br>
 print(img2)<br>
-OUTPUT:
+OUTPUT:<br>
 (255, 255, 0)
 (255, 0, 0)
 
@@ -81,7 +81,7 @@ print("Mode:",image.mode)<br>
 print("Width:",image.width)<br>
 print("Height:",image.height)<br>
 image.close();<br>
-OUTPUT:
+OUTPUT:<br>
 Fiename: b1.jpg
 Format: JPEG
 Size: (1300, 1036)
