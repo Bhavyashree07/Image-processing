@@ -51,3 +51,9 @@ OUTPUT:
 
 
 5.Write a program to create image using colors from PI import Image<br>
+from PIL import Image<br>
+img=Image.new('RGB',(200,400),(255,255,0))<br>
+img.show()<br>
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940064/173815528-dc64c021-01d9-4cb7-8b9c-bac8456ee96f.png)
+
