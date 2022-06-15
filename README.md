@@ -82,12 +82,12 @@ print("Width:",image.width)<br>
 print("Height:",image.height)<br>
 image.close();<br>
 OUTPUT:<br>
-Fiename: b1.jpg
-Format: JPEG
-Size: (1300, 1036)
-Mode: RGB
-Width: 1300
-Height: 1036
+Fiename: b1.jpg<br>
+Format: JPEG<br>
+Size: (1300, 1036)<br>
+Mode: RGB<br>
+Width: 1300<br>
+Height: 1036<br>
                  
 
 
