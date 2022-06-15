@@ -6,6 +6,8 @@ cv2.imshow('image',img)<br>
 cv2.waitKey(0)<br>
 c2.destroyAllwindows()<br>
 OUTPUT:<br>
+![image](https://user-images.githubusercontent.com/97940064/173814001-1d10f995-d4dc-4dad-9dfc-1f82573af136.png)
+
 
 
 
