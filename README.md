@@ -107,12 +107,28 @@ cv2.imshow("Binary",bw_img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 
-OUTPUTT:<br>
+OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/97940064/174037854-5e18a610-34ec-4fb0-ba5b-8ec180b62388.png)
 ![image](https://user-images.githubusercontent.com/97940064/174038196-a66fd5de-912d-40a1-b8b4-ee48038a0d6d.png)
 ![image](https://user-images.githubusercontent.com/97940064/174038495-593b46ad-df5d-4318-bb6a-835883dce823.png)
 
                  
 
-   
+9.Resize the original image<br>
+import cv2<br>
+img=cv2.imread('p1.jpg')<br>
+print('original image lenght width',img.shape)<br>
+cv2.imshow('original image',img)<br>
+cv2.waitKey(0)<br>
+imgresize=cv2.resize(img,(150,160))<br>
+cv2.imshow('Resized image',imgresize)<br>
+print('Resized image length width',imgresize.shape)<br>
+cv2.waitKey(0)<br>
+
+OUTPUT:
+original image lenght width (800, 1280, 3)
+![image](https://user-images.githubusercontent.com/97940064/174049340-a338dd0a-40bb-44d1-afd1-28f98fcb71dc.png)
+![image](https://user-images.githubusercontent.com/97940064/174048924-3b7ad009-8a69-42a5-a755-acb81c830606.png)
+
+
 
