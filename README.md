@@ -33,6 +33,7 @@ OUTPUT:<br>
 
 
 4.Develop a program to convert color strings to RGB color values<br>
+
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
@@ -88,6 +89,29 @@ Size: (1300, 1036)<br>
 Mode: RGB<br>
 Width: 1300<br>
 Height: 1036<br>
+
+
+
+8.Convert the original image to Gray scale and then to Binary<br>
+import cv2<br>
+img=cv2.imread('f1.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br>
+
+img=cv2.imread('f1.jpg',0)<br>
+cv2.imshow("Gray",img)<br>
+cv2.waitKey(0)<br>
+
+ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
+cv2.imshow("Binary",bw_img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+OUTPUTT:<br>
+![image](https://user-images.githubusercontent.com/97940064/174037854-5e18a610-34ec-4fb0-ba5b-8ec180b62388.png)
+![image](https://user-images.githubusercontent.com/97940064/174038196-a66fd5de-912d-40a1-b8b4-ee48038a0d6d.png)
+![image](https://user-images.githubusercontent.com/97940064/174038495-593b46ad-df5d-4318-bb6a-835883dce823.png)
+
                  
 
    
