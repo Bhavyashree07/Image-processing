@@ -1,0 +1,151 @@
+#Adding 10 nos
+Sum = 0
+print(" Enter 10 Numbers\n")
+i = 1
+while(i <= 10):
+    num = int(input("Number %d = " %i))
+    Sum = Sum + num
+    i = i + 1
+print("The Sum of 10 Numbers  = ", Sum)
+
+
+
+
+print("Enter the Value of n: ")
+n = int(input())
+print("Enter the Value of r: ")
+r = int(input())
+
+fact = 1
+i = 1
+while i<=n:
+  fact = i*fact
+  i = i+1
+
+numerator = fact          
+sub = n - r               
+fact = 1
+i = 1
+while i<=sub:
+  fact = i*fact
+  i = i+1
+denominator = fact        
+perm = numerator/denominator
+
+print("\nPermutation =", perm)
+
+
+
+
+print("Enter the Value of n: ", end="")
+n = int(input())
+print("Enter the Value of r: ", end="")
+r = int(input())
+fact = i = 1
+while i<=n:
+  fact = i*fact
+  i += 1
+
+numerator = fact
+sub = n-r
+fact = i = 1
+
+while i<=sub:
+  fact = i*fact
+  i += 1
+
+denominator = fact
+fact = i = 1
+while i<=r:
+  fact = i*fact
+  i += 1
+
+denominator = fact*denominator
+comb = numerator/denominator
+print("\nCombination (nCr) =", comb)
+
+
+
+
+#fibonacci nos
+num = int(input("How many numbers? "))
+n1 = 0 
+n2 = 1
+count = 0
+if num <= 0:
+   print("Invalid")
+elif num== 1:
+   print("Fibonacci sequence upto",num,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < num:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+
+
+
+#Armostrong
+num = int(input("Enter a number: "))
+sum = 0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** 3
+   temp //= 10
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+
+
+#Factorial
+num = int(input("Enter a number: "))    
+factorial = 1    
+if num < 0:    
+   print(" Factorial does not exist for negative numbers")    
+elif num == 0:    
+   print("The factorial of 0 is 1")    
+else:    
+   for i in range(1,num + 1):    
+       factorial = factorial*i    
+   print("The factorial of",num,"is",factorial)    
+
+
+
+#Prime or not
+num = int(input("Enter a number: "))
+flag = False
+if num > 1:
+       for i in range(2, num):
+        if (num % i) == 0:
+                       flag = True
+                       break
+if flag:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
+
+
+
+
+string1 ="Bhavya"
+string2="shree"
+#add two strings
+string3=string1+string2
+print(string3);
+
+
+
+str="hello"
+print(str.upper());
+
+
+num1=2;
+num2=5;
+sum=num1+num2;
+print(sum);
