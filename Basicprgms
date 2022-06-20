@@ -1,151 +1,144 @@
-#Adding 10 nos
-Sum = 0
-print(" Enter 10 Numbers\n")
-i = 1
-while(i <= 10):
-    num = int(input("Number %d = " %i))
-    Sum = Sum + num
-    i = i + 1
-print("The Sum of 10 Numbers  = ", Sum)
+#Adding 10 nos<br>
+Sum = 0<br>
+print(" Enter 10 Numbers\n")<br>
+i = 1<br>
+while(i <= 10):<br>
+    num = int(input("Number %d = " %i))<br>
+    Sum = Sum + num<br>
+    i = i + 1<br>
+print("The Sum of 10 Numbers  = ", Sum)<br>
+
+
+
+#permutation<br>
+print("Enter the Value of n: ")<br>
+n = int(input())<br>
+print("Enter the Value of r: ")<br>
+r = int(input())<br>
+fact = 1<br>
+i = 1<br>
+while i<=n:<br>
+  fact = i*fact<br>
+  i = i+1<br>
+numerator = fact <br>         
+sub = n - r <br>              
+fact = 1<br>
+i = 1<br>
+while i<=sub:<br>
+  fact = i*fact<br><br>
+  i = i+1<br><br>
+denominator = fact    <br><br>    
+perm = numerator/denominator<br><br>
+print("\nPermutation =", perm)<br><br>
+
+
+
+#combination<br><br>
+print("Enter the Value of n: ", end="")<br><br>
+n = int(input())<br><br>
+print("Enter the Value of r: ", end="")<br><br>
+r = int(input())<br><br>
+fact = i = 1<br><br>
+while i<=n:<br><br>
+  fact = i*fact<br><br>
+  i += 1<br><br>
+numerator = fact<br><br>
+sub = n-r<br><br>
+fact = i = 1<br><br>
+while i<=sub:<br><br>
+  fact = i*fact<br>
+  i += 1<br>
+denominator = fact<br>
+fact = i = 1<br>
+while i<=r:<br>
+  fact = i*fact<br>
+  i += 1<br>
+denominator = fact*denominator<br>
+comb = numerator/denominato<br><br>r<br>
+print("\nCombination (nCr) =", comb)<br>
 
 
 
 
-print("Enter the Value of n: ")
-n = int(input())
-print("Enter the Value of r: ")
-r = int(input())
-
-fact = 1
-i = 1
-while i<=n:
-  fact = i*fact
-  i = i+1
-
-numerator = fact          
-sub = n - r               
-fact = 1
-i = 1
-while i<=sub:
-  fact = i*fact
-  i = i+1
-denominator = fact        
-perm = numerator/denominator
-
-print("\nPermutation =", perm)
+#fibonacci nos<br><br>
+num = int(input("How many numbers? "))<br><br>
+n1 = 0 <br><br>
+n2 = 1<br><br>
+count = 0<br><br>
+if num <= 0:<br><br>
+   print("Invalid")<br><br>
+elif num== 1:<br><br>
+   print("Fibonacci sequence upto",num,":")<br><br>
+   print(n1)<br><br>
+else:<br><br>
+   print("Fibonacci sequence:")<br><br>
+   while count < num:<br><br>
+       print(n1)<br><br>
+       nth = n1 + n2<br><br>
+       n1 = n2<br><br>
+       n2 = nth<br><br>
+       count += 1<br><br>
 
 
 
-
-print("Enter the Value of n: ", end="")
-n = int(input())
-print("Enter the Value of r: ", end="")
-r = int(input())
-fact = i = 1
-while i<=n:
-  fact = i*fact
-  i += 1
-
-numerator = fact
-sub = n-r
-fact = i = 1
-
-while i<=sub:
-  fact = i*fact
-  i += 1
-
-denominator = fact
-fact = i = 1
-while i<=r:
-  fact = i*fact
-  i += 1
-
-denominator = fact*denominator
-comb = numerator/denominator
-print("\nCombination (nCr) =", comb)
+#Armostrong<br>
+num = int(input("Enter a number: "))<br>
+sum = 0<br>
+temp = num<br>
+while temp > 0:<br>
+   digit = temp % 10<br>
+   sum += digit ** 3<br>
+   temp //= 10<br>
+if num == sum:<br>
+   print(num,"is an Armstrong number")<br>
+else:<br>
+   print(num,"is not an Armstrong number")<br>
 
 
 
-
-#fibonacci nos
-num = int(input("How many numbers? "))
-n1 = 0 
-n2 = 1
-count = 0
-if num <= 0:
-   print("Invalid")
-elif num== 1:
-   print("Fibonacci sequence upto",num,":")
-   print(n1)
-else:
-   print("Fibonacci sequence:")
-   while count < num:
-       print(n1)
-       nth = n1 + n2
-       n1 = n2
-       n2 = nth
-       count += 1
+#Factorial<br>
+num = int(input("Enter a number: "))<br>  
+factorial = 1 <br>  
+if num < 0: <br>
+   print(" Factorial does not exist for negative numbers")<br>   
+elif num == 0: <br>   
+   print("The factorial of 0 is 1")<br>    
+else:<br>    
+   for i in range(1,num + 1):<br>    
+       factorial = factorial*i<br>    
+   print("The factorial of",num,"is",factorial)<br>    
 
 
 
-#Armostrong
-num = int(input("Enter a number: "))
-sum = 0
-temp = num
-while temp > 0:
-   digit = temp % 10
-   sum += digit ** 3
-   temp //= 10
-if num == sum:
-   print(num,"is an Armstrong number")
-else:
-   print(num,"is not an Armstrong number")
-
-
-
-#Factorial
-num = int(input("Enter a number: "))    
-factorial = 1    
-if num < 0:    
-   print(" Factorial does not exist for negative numbers")    
-elif num == 0:    
-   print("The factorial of 0 is 1")    
-else:    
-   for i in range(1,num + 1):    
-       factorial = factorial*i    
-   print("The factorial of",num,"is",factorial)    
-
-
-
-#Prime or not
-num = int(input("Enter a number: "))
-flag = False
-if num > 1:
-       for i in range(2, num):
-        if (num % i) == 0:
-                       flag = True
-                       break
-if flag:
-    print(num, "is not a prime number")
-else:
-    print(num, "is a prime number")
+#Prime or not<br>
+num = int(input("Enter a number: "))<br>
+flag = False<br>
+if num > 1:<br>
+       for i in range(2, num):<br>
+        if (num % i) == 0:<br>
+                       flag = True<br>
+                       break<br>
+if flag:<br>
+    print(num, "is not a prime number")<br>
+else:<br>
+    print(num, "is a prime number")<br>
 
 
 
 
-string1 ="Bhavya"
-string2="shree"
-#add two strings
-string3=string1+string2
-print(string3);
+string1 ="Bhavya"<br>
+string2="shree"<br>
+#add two strings<br>
+string3=string1+string2<br>
+print(string3);<br>
 
 
 
-str="hello"
-print(str.upper());
+str="hello"<br>
+print(str.upper());<br>
 
 
-num1=2;
-num2=5;
-sum=num1+num2;
-print(sum);
+num1=2;<br>
+num2=5;<br>
+sum=num1+num2;<br>
+print(sum);<br>
