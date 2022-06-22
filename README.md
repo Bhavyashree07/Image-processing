@@ -131,7 +131,7 @@ original image lenght width (800, 1280, 3)
 ![image](https://user-images.githubusercontent.com/97940064/174048924-3b7ad009-8a69-42a5-a755-acb81c830606.png)
 
 
-10.Develop a program to read image using URL<br>
+**1.Develop a program to read image using URL**<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://www.teahub.io/photos/full/41-417562_goldfish-fish-facts-wallpapers-pictures-download-gold-fish.jpg'<br>
@@ -139,6 +139,64 @@ image=io.imread(url)<br>
 plt.imshow(image)<br>
 plt.show()<br>
 
-OUTPUT:<br>
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/175004957-89831e2c-4554-4ecd-8a4b-568037d2240b.png)
+
+**2.Write a program to mask and blur the image**<br>
+import cv2<br>
+import matplotlib.image as mpimg<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('fish.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+**OUTPUT:**<br>
+![image](https://user-images.githubusercontent.com/97940064/175014859-dc70d075-50ac-44b2-9bcc-0c54881d2d26.png)
+
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(8,255,255)<br>
+mask=cv2.inRange(img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
+
+
+**OUTPUT:**<br>
+![image](https://user-images.githubusercontent.com/97940064/175015103-25dd2b09-bae3-402d-b3ad-e482a88c08c3.png)
+
+light_white=(0,0,200)<br>
+dark_white=(145,60,255)<br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white)<br>
+plt.show()<br>
+
+**OUTPUT:**<br>
+![image](https://user-images.githubusercontent.com/97940064/175015412-cf4a1c44-070f-424e-b312-a2364619524c.png)
+
+final_mask=mask+mask_white<br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(final_mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(final_result)<br>
+plt.show()<br>
+
+**OUTPUT:**<br>
+![image](https://user-images.githubusercontent.com/97940064/175015768-71f7bcac-3d95-479c-a506-2db2778c358b.png)
+
+blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
+
+**OUTPUT:**<br>
+![image](https://user-images.githubusercontent.com/97940064/175015972-6ddafcaa-562d-4ecd-98fb-b97054aed6f9.png)
+
 
