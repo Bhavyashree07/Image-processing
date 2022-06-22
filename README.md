@@ -139,6 +139,6 @@ image=io.imread(url)<br>
 plt.imshow(image)<br>
 plt.show()<br>
 
-OUTPUT:
+OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/97940064/175004957-89831e2c-4554-4ecd-8a4b-568037d2240b.png)
 
