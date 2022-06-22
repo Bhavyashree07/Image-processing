@@ -131,4 +131,14 @@ original image lenght width (800, 1280, 3)
 ![image](https://user-images.githubusercontent.com/97940064/174048924-3b7ad009-8a69-42a5-a755-acb81c830606.png)
 
 
+10.Develop a program to read image using URL<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://www.teahub.io/photos/full/41-417562_goldfish-fish-facts-wallpapers-pictures-download-gold-fish.jpg'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
+
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940064/175004957-89831e2c-4554-4ecd-8a4b-568037d2240b.png)
 
