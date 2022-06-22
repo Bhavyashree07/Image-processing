@@ -200,3 +200,39 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/175015972-6ddafcaa-562d-4ecd-98fb-b97054aed6f9.png)
 
 
+
+
+
+import cv2<br>
+import matplotlib.image as mpimg<br>
+import matplotlib.pyplot as plt<br>
+
+img1=cv2.imread('f1.jpg')<br>
+img2=cv2.imread('f2.jpg')<br>
+
+fimg1 = img1 + img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2 = img1 - img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3 = img1 * img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4 = img1 / img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
+
+cv2.imwrite('output.jpg',fimg4)<br>
+
+output
+![image](https://user-images.githubusercontent.com/97940064/175022506-d80eea4d-f08d-4ec4-8984-a006e2399e4f.png)
+![image](https://user-images.githubusercontent.com/97940064/175022657-5021f219-3653-4786-a1bc-d5c962cfd7d8.png)
+
+
