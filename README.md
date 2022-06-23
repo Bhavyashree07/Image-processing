@@ -5,7 +5,8 @@ img=cv2.imread('b1.jpg',0)<br>
 cv2.imshow('image',img)<br>
 cv2.waitKey(0)<br>
 c2.destroyAllwindows()<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173814001-1d10f995-d4dc-4dad-9dfc-1f82573af136.png)
 
 
@@ -16,7 +17,8 @@ import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
 img=mpimg.imread('b1.jpg')<br>
 plt.imshow(img)<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173811925-dd732c9c-369b-4776-8c72-2d1bf0331b09.png)
 
 
@@ -27,7 +29,8 @@ img=img.rotate(180)<br>
 img.show()<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173813524-b5019ad7-5079-4772-b171-1edb21823f66.png)
 
 
@@ -49,7 +52,8 @@ OUTPUT:<br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,255,0))<br>
 img.show()<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173815528-dc64c021-01d9-4cb7-8b9c-bac8456ee96f.png)
 
 
@@ -67,7 +71,8 @@ plt.show()<br>
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
 plt.imshow(img)<br>
 plt.show()<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173816743-61595013-6f2e-40fc-a47f-fdf4a14c6979.png)
 
 
@@ -107,7 +112,7 @@ cv2.imshow("Binary",bw_img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 
-OUTPUT:<br>
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/174050027-2a29459c-8812-4729-a492-4d914420be4d.png)
 ![image](https://user-images.githubusercontent.com/97940064/174050216-523499ca-5b7a-4237-9b7d-c9ab4abe8905.png)
 ![image](https://user-images.githubusercontent.com/97940064/174050400-4d2b4ced-77f5-49d9-be4e-e10978764fb4.png)
@@ -125,7 +130,7 @@ cv2.imshow('Resized image',imgresize)<br>
 print('Resized image length width',imgresize.shape)<br>
 cv2.waitKey(0)<br>
 
-OUTPUT:<br>
+**OUTPUT:**<br>
 original image lenght width (800, 1280, 3)
 ![image](https://user-images.githubusercontent.com/97940064/174049340-a338dd0a-40bb-44d1-afd1-28f98fcb71dc.png)
 ![image](https://user-images.githubusercontent.com/97940064/174048924-3b7ad009-8a69-42a5-a755-acb81c830606.png)
@@ -231,13 +236,12 @@ plt.show()<br>
 
 cv2.imwrite('output.jpg',fimg4)<br>
 
-output
+**OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/175022506-d80eea4d-f08d-4ec4-8984-a006e2399e4f.png)
 ![image](https://user-images.githubusercontent.com/97940064/175282993-74e4f576-56ae-4361-b22d-3fabc976e5b7.png)
 ![image](https://user-images.githubusercontent.com/97940064/175285829-69a2906d-5761-4911-b630-ed986725b6e5.png)
 
 
-![image](https://user-images.githubusercontent.com/97940064/175022657-5021f219-3653-4786-a1bc-d5c962cfd7d8.png)
 
  
 
