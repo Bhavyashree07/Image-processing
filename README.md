@@ -236,3 +236,30 @@ output
 ![image](https://user-images.githubusercontent.com/97940064/175022657-5021f219-3653-4786-a1bc-d5c962cfd7d8.png)
 
 
+
+**4.Develop the program to change the image to different color space**<br>
+import cv2 <br>
+img=cv2.imread('E:\\b3.jpg')<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLS image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+**OOUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/175274059-e993fc1e-7a0d-469d-b8de-fcfc994730a2.png)
+![image](https://user-images.githubusercontent.com/97940064/175274255-8ca880c7-708f-4cd3-84fa-0f3cb182cf8f.png)
+![image](https://user-images.githubusercontent.com/97940064/175274845-9a941493-9fa5-4bbc-8d2d-8e586d466cef.png)
+![image](https://user-images.githubusercontent.com/97940064/175275003-5479e091-7ffb-49e5-b5c1-6e86ddf5ec3d.png)
+![image](https://user-images.githubusercontent.com/97940064/175275132-aeb6c615-bc67-412c-8e2a-fa58953c544b.png)
+
+
+
+
