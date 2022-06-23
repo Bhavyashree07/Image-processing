@@ -207,7 +207,7 @@ plt.show()<br>
 
 
 
-
+**Write a program to perform arithmatic operations on images**
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
