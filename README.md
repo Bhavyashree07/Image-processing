@@ -290,7 +290,7 @@ c.waitKey(0)<br>
 **Bitwise Operation**<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
-image1=cv2.imread('f3.jpg',1)<br>
+image1=cv2.imread('f3.jpg')<br>
 image2=cv2.imread('f4.jpg')<br>
 ax=plt.subplots(figsize=(15,10))<br>
 bitwiseAnd=cv2.bitwise_and(image1,image2)<br>
