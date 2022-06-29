@@ -313,7 +313,7 @@ cv2.waitKey(0)<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/176404531-a617d1c6-abbe-4f3d-a639-16620754c1f2.png)
 
-**Bitwise Operation(with two diff images)**<br>
+**Bitwise Operation(with two same images)**<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
