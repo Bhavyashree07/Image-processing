@@ -310,5 +310,5 @@ plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
 
-**OUTPUT**<br<
+**OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/176404531-a617d1c6-abbe-4f3d-a639-16620754c1f2.png)
