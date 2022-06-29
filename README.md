@@ -357,8 +357,11 @@ cv2.imshow('Bilateral Blurring',bilateral)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
 
-**OUTPUT**
-![image](https://user-images.githubusercontent.com/97940064/176421155-23df0a8f-4a6f-460b-98d0-9f77ca99e004.png)![image](https://user-images.githubusercontent.com/97940064/176421392-eae5a4c8-6d65-40cb-95db-497626d58605.png)![image](https://user-images.githubusercontent.com/97940064/176421613-6759ca08-0829-470a-b340-28deda9c3455.png)![image](https://user-images.githubusercontent.com/97940064/176421728-cdfb9c94-5b9f-4fe0-826e-9e16e95cb3d8.png)
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/176421155-23df0a8f-4a6f-460b-98d0-9f77ca99e004.png)
+![image](https://user-images.githubusercontent.com/97940064/176421392-eae5a4c8-6d65-40cb-95db-497626d58605.png)
+![image](https://user-images.githubusercontent.com/97940064/176421613-6759ca08-0829-470a-b340-28deda9c3455.png)
+![image](https://user-images.githubusercontent.com/97940064/176421728-cdfb9c94-5b9f-4fe0-826e-9e16e95cb3d8.png)
 
 
 
