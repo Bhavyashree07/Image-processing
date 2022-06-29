@@ -364,9 +364,31 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940064/176421728-cdfb9c94-5b9f-4fe0-826e-9e16e95cb3d8.png)
 
 
+***Enhancement**<br>
+from PIL import Image
+from PIL import ImageEnhance
+image=Image.open('B2.jpg')
+image.show()
+enh_bri=ImageEnhance.Brightness(image)
+brightness=1.5
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()
+enh_col=ImageEnhance.Color(image)
+color=1.5
+image_colored=enh_col.enhance(color)
+image_colored.show()
+enh_con=ImageEnhance.Contrast(image)
+contrast=1.5
+image_contrasted=enh_con.enhance(contrast)
+image_contrasted.show()
+enh_sha=ImageEnhance.Sharpness(image)
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)
+image_sharped.show()
 
 
-
+output<br>
+![image](https://user-images.githubusercontent.com/97940064/176427077-6f7140cb-8837-4070-a8ff-f6cfd425f834.png)
 
 
 
@@ -414,3 +436,5 @@ cv2.waitKey(0)<br>
 
 **OUTPUT**
 ![image](https://user-images.githubusercontent.com/97940064/176426010-f94f156c-fb2a-495e-9067-a51bceb3a5b0.png)
+
+
