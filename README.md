@@ -9,7 +9,7 @@ c2.destroyAllwindows()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173814001-1d10f995-d4dc-4dad-9dfc-1f82573af136.png)
 
-
+******************************************************************************************************************
 
 
 2. Develop a program to display the image using matplotlib<br>
@@ -21,7 +21,7 @@ plt.imshow(img)<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173811925-dd732c9c-369b-4776-8c72-2d1bf0331b09.png)
 
-
+*****************************************************************************************************************
 3.Develop a program to perform linear transformation -Rotation<br>
 from PIL import Image<br>
 img=Image.open("b1.jpg")<br>
