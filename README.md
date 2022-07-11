@@ -11,7 +11,6 @@ c2.destroyAllwindows()<br>
 
 ******************************************************************************************************************
 
-
 2. Develop a program to display the image using matplotlib<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
@@ -22,6 +21,7 @@ plt.imshow(img)<br>
 ![image](https://user-images.githubusercontent.com/97940064/173811925-dd732c9c-369b-4776-8c72-2d1bf0331b09.png)
 
 *****************************************************************************************************************
+
 3.Develop a program to perform linear transformation -Rotation<br>
 from PIL import Image<br>
 img=Image.open("b1.jpg")<br>
@@ -33,7 +33,7 @@ cv2.destroyAllWindows()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173813524-b5019ad7-5079-4772-b171-1edb21823f66.png)
 
-
+****************************************************************************************************************
 
 4.Develop a program to convert color strings to RGB color values<br>
 
@@ -42,11 +42,12 @@ img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
 img2=ImageColor.getrgb("red")<br>
 print(img2)<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 (255, 255, 0)
 (255, 0, 0)
 
-
+*******************************************************************************************************************
 
 5.Write a program to create image using colors from PI import Image<br>
 from PIL import Image<br>
@@ -56,7 +57,7 @@ img.show()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173815528-dc64c021-01d9-4cb7-8b9c-bac8456ee96f.png)
 
-
+********************************************************************************************************************
 
 6.Develop a program to visualize the image using various colorspaces<br>
 import cv2<br>
@@ -75,7 +76,7 @@ plt.show()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173816743-61595013-6f2e-40fc-a47f-fdf4a14c6979.png)
 
-
+******************************************************************************************************************
 
 
 7.Write a program to display the image attributes from PIL import Image<br>
@@ -87,7 +88,8 @@ print("Mode:",image.mode)<br>
 print("Width:",image.width)<br>
 print("Height:",image.height)<br>
 image.close();<br>
-OUTPUT:<br>
+
+**OUTPUT:**<br>
 Fiename: b1.jpg<br>
 Format: JPEG<br>
 Size: (1300, 1036)<br>
@@ -95,7 +97,7 @@ Mode: RGB<br>
 Width: 1300<br>
 Height: 1036<br>
 
-
+************************************************************************************************************************
 
 8.Convert the original image to Gray scale and then to Binary<br>
 import cv2<br>
@@ -117,7 +119,7 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940064/174050216-523499ca-5b7a-4237-9b7d-c9ab4abe8905.png)
 ![image](https://user-images.githubusercontent.com/97940064/174050400-4d2b4ced-77f5-49d9-be4e-e10978764fb4.png)
 
-                 
+************************************************************************************************************************                 
 
 9.Resize the original image<br>
 import cv2<br>
@@ -135,6 +137,7 @@ original image lenght width (800, 1280, 3)
 ![image](https://user-images.githubusercontent.com/97940064/174049340-a338dd0a-40bb-44d1-afd1-28f98fcb71dc.png)
 ![image](https://user-images.githubusercontent.com/97940064/174048924-3b7ad009-8a69-42a5-a755-acb81c830606.png)
 
+*****************************************************************************************************************
 
 **1.Develop a program to read image using URL**<br>
 from skimage import io<br>
@@ -363,6 +366,7 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940064/176421613-6759ca08-0829-470a-b340-28deda9c3455.png)
 ![image](https://user-images.githubusercontent.com/97940064/176421728-cdfb9c94-5b9f-4fe0-826e-9e16e95cb3d8.png)
 
+************************************************************************************************************************
 
 **Enhancement**<br>
 from PIL import Image<br>
@@ -390,24 +394,7 @@ image_sharped.show()<br>
 output<br>
 ![image](https://user-images.githubusercontent.com/97940064/176427077-6f7140cb-8837-4070-a8ff-f6cfd425f834.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+********************************************************************************************************************
 
 ***Morphology***<br>
 import cv2<br>
