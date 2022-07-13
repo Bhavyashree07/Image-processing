@@ -461,3 +461,28 @@ plt.show()<br>
     
 ***OUTPUT***<br>
 ![image](https://user-images.githubusercontent.com/97940064/178708617-987ba38f-d4f6-4749-8e03-831605be4083.png)
+
+
+
+
+ ***Graylevel slicing without background***<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('cat.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>   
+
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178709499-97bd1796-f623-44ee-a9e2-e11965c53134.png)
+
