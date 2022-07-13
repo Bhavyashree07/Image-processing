@@ -28,7 +28,7 @@ img=Image.open("b1.jpg")<br>
 img=img.rotate(180)<br>
 img.show()<br>
 cv2.waitKey(0)<br>
-cv2.destroyAllWindows()<br>
+cv2.destroyAllWindows()<br> 
 
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/173813524-b5019ad7-5079-4772-b171-1edb21823f66.png)
