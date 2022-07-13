@@ -424,3 +424,20 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940064/176426010-f94f156c-fb2a-495e-9067-a51bceb3a5b0.png)
 
 
+***Original and Grayscale Image***<br>
+import cv2<br>
+OriginalImg=cv2.imread('img1.jpg')<br>
+GrayImg=cv2.imread('img1.jpg',0)<br>
+isSaved=cv2.imwrite('‪‪E:\flwr\img1.jpg',GrayImg)<br>
+cv2.imshow('Display Original Image',OriginalImg)<br>
+cv2.imshow('Display Grayscale Image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
+    print('The image is successfully saved.')<br>
+    
+**OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178698908-1a77a7c8-5853-4837-ac6a-5bc625689619.png)
+![image](https://user-images.githubusercontent.com/97940064/178699096-2abf0ccd-23a5-41f4-853f-c9fe5998fbe8.png)
+
+
