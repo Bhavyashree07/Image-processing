@@ -368,7 +368,7 @@ cv2.destroyAllWindows()<br>
 
 ************************************************************************************************************************
 
-**Enhancement**<br>
+**Image Enhancement**<br>
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
 image=Image.open('B2.jpg')<br>
@@ -389,7 +389,6 @@ enh_sha=ImageEnhance.Sharpness(image)<br>
 sharpness=3.0<br>
 image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>
-
 
 output<br>
 ![image](https://user-images.githubusercontent.com/97940064/176427077-6f7140cb-8837-4070-a8ff-f6cfd425f834.png)
