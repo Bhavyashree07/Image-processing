@@ -210,7 +210,7 @@ plt.show()<br>
 
 
 
-***Write a program to perform arithmatic operations on images***<br>
+***3.Write a program to perform arithmatic operations on images***<br>
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
@@ -290,7 +290,7 @@ c.waitKey(0)<br>
 
 
 
-***Bitwise Operation(with two diff images)***<br>
+***6.Bitwise Operation(with two diff images)***<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
@@ -316,7 +316,7 @@ cv2.waitKey(0)<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/176404531-a617d1c6-abbe-4f3d-a639-16620754c1f2.png)
 
-***Bitwise Operation(with two same images)***<br>
+***7.Bitwise Operation(with two same images)***<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
@@ -343,7 +343,7 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940064/176406214-981e8df6-3f65-4c02-8aed-a04b1ef8506f.png)
 
 
-***Blurring***<br>
+***8.Blurring***<br>
 import cv2<br>
 import numpy as np<br>
 image=cv2.imread('B2.jpg')<br>
@@ -368,7 +368,7 @@ cv2.destroyAllWindows()<br>
 
 ************************************************************************************************************************
 
-***Image Enhancement***<br>
+***9.Image Enhancement***<br>
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
 image=Image.open('B2.jpg')<br>
@@ -401,7 +401,7 @@ output<br>
 
 ********************************************************************************************************************
 
-***Morphology***<br>
+***10.Morphology***<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -430,7 +430,7 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940064/176426010-f94f156c-fb2a-495e-9067-a51bceb3a5b0.png)
 
 
-***Original and Grayscale Image***<br>
+***11.Original and Grayscale Image***<br>
 import cv2<br>
 OriginalImg=cv2.imread('img1.jpg')<br>
 GrayImg=cv2.imread('img1.jpg',0)<br>
@@ -449,7 +449,7 @@ if isSaved:<br>
 ![image](https://user-images.githubusercontent.com/97940064/178715972-83f13f9d-1cdb-497c-9d10-8b31043e4d55.png)
 
 
-***Graylevel slicing with background***<br>
+***12.Graylevel slicing with background***<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -473,7 +473,7 @@ plt.show()<br>
 
 
 
- ***Graylevel slicing without background***<br>
+ ***13.Graylevel slicing without background***<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
