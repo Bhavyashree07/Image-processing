@@ -391,7 +391,8 @@ image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>
 
 output<br>
-![image](https://user-images.githubusercontent.com/97940064/176427077-6f7140cb-8837-4070-a8ff-f6cfd425f834.png)
+![image](https://user-images.githubusercontent.com/97940064/178706680-d1f72c55-f5e9-4cf6-9204-5ed623c37ff9.png)
+
 
 ********************************************************************************************************************
 
@@ -440,4 +441,23 @@ if isSaved:<br>
 ![image](https://user-images.githubusercontent.com/97940064/178698908-1a77a7c8-5853-4837-ac6a-5bc625689619.png)
 ![image](https://user-images.githubusercontent.com/97940064/178699096-2abf0ccd-23a5-41f4-853f-c9fe5998fbe8.png)
 
-
+***Graylevel slicing with background***<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('cat.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
+    
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178708617-987ba38f-d4f6-4749-8e03-831605be4083.png)
