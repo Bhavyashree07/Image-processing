@@ -139,7 +139,7 @@ original image lenght width (800, 1280, 3)
 
 *****************************************************************************************************************
 
-**1.Develop a program to read image using URL**<br>
+***1.Develop a program to read image using URL***<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://www.teahub.io/photos/full/41-417562_goldfish-fish-facts-wallpapers-pictures-download-gold-fish.jpg'<br>
@@ -150,7 +150,7 @@ plt.show()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/175004957-89831e2c-4554-4ecd-8a4b-568037d2240b.png)
 
-**2.Write a program to mask and blur the image**<br>
+***2.Write a program to mask and blur the image***<br>
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
@@ -210,7 +210,7 @@ plt.show()<br>
 
 
 
-**Write a program to perform arithmatic operations on images**
+***Write a program to perform arithmatic operations on images***<br>
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
@@ -248,7 +248,7 @@ cv2.imwrite('output.jpg',fimg4)<br>
 
  
 
-**4.Develop the program to change the image to different color space**<br>
+***4.Develop the program to change the image to different color space***<br>
 import cv2 <br>
 img=cv2.imread('E:\\b3.jpg')<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
@@ -273,7 +273,7 @@ cv2.destroyAllWindows()<br>
 
 
 
-**5.Program to create an image using 2D array**<br>
+***5.Program to create an image using 2D array***<br>
 import cv2 as c<br>
 import numpy as np<br>
 from PIL import Image<br>
@@ -290,7 +290,7 @@ c.waitKey(0)<br>
 
 
 
-**Bitwise Operation(with two diff images)**<br>
+***Bitwise Operation(with two diff images)***<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
@@ -316,7 +316,7 @@ cv2.waitKey(0)<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/176404531-a617d1c6-abbe-4f3d-a639-16620754c1f2.png)
 
-**Bitwise Operation(with two same images)**<br>
+***Bitwise Operation(with two same images)***<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
@@ -343,7 +343,7 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940064/176406214-981e8df6-3f65-4c02-8aed-a04b1ef8506f.png)
 
 
-**Blurring**<br>
+***Blurring***<br>
 import cv2<br>
 import numpy as np<br>
 image=cv2.imread('B2.jpg')<br>
@@ -368,7 +368,7 @@ cv2.destroyAllWindows()<br>
 
 ************************************************************************************************************************
 
-**Image Enhancement**<br>
+***Image Enhancement***<br>
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
 image=Image.open('B2.jpg')<br>
