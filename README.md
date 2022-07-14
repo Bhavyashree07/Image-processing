@@ -36,7 +36,6 @@ cv2.destroyAllWindows()<br>
 ****************************************************************************************************************
 
 4.Develop a program to convert color strings to RGB color values<br>
-
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
