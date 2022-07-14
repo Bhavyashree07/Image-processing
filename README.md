@@ -496,17 +496,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/178709499-97bd1796-f623-44ee-a9e2-e11965c53134.png)
 
 
-import cv2<br>
-import numpy as np<br>
-img  = cv2.imread('n3.jpg',0)<br>
-hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
-plt.hist(img.ravel(),256,[0,256])<br>
-plt.show()<br>
-
-***OUTPUT***<br>
-![image](https://user-images.githubusercontent.com/97940064/178964876-0957cf4e-da88-4a3c-8589-fe7aaac82f46.png)
-
-
+*** Analyse the image data using HISTOGRAM****<br>
 
 import numpy as np<br>
 import cv2 as cv<br>
