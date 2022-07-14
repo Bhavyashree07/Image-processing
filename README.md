@@ -496,7 +496,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/178709499-97bd1796-f623-44ee-a9e2-e11965c53134.png)
 
 
-*** Analyse the image data using HISTOGRAM****<br>
+***Analyse the image data using HISTOGRAM****<br>
 
 import numpy as np<br>
 import cv2 as cv<br>
