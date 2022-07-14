@@ -511,7 +511,7 @@ plt.show()<br>
 ***OUTPUT***<br>
 ![image](https://user-images.githubusercontent.com/97940064/178964986-85efcf34-c0cc-4f05-bc39-741e746d735c.png)
 
-
+*********************************************************************************************************************
 
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
@@ -526,8 +526,20 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/178965106-ab58db9d-accc-4392-9d78-d795f5b28d7a.png)
 
 
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+img = cv.imread('n3.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+ax = plt.xlabel('Intensity Value')<br>
+ax = plt.ylabel('Count') <br>
+plt.show()<br>
 
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178969193-064e73f6-469e-4134-a8fc-70d5092456dc.png)
 
+*****************************************************************************************************************************************
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 image = io.imread('n3.jpg')<br>
@@ -543,10 +555,7 @@ plt.show()<br>
 ***OUTPUT***<br>
 ![image](https://user-images.githubusercontent.com/97940064/178965185-e5ab0418-1eab-4786-a672-92cd255e432d.png)
 
-
-
-
-
+****************************************************************************************************************************************
 from matplotlib import pyplot as plt<br>
 import numpy as np<br>
 fig,ax = plt.subplots(1,1)<br>
