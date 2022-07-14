@@ -496,7 +496,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/178709499-97bd1796-f623-44ee-a9e2-e11965c53134.png)
 
 
-***Analyse the image data using HISTOGRAM****<br>
+***Analyse the image data using HISTOGRAM(numpy)****<br>
 
 import numpy as np<br>
 import cv2 as cv<br>
@@ -512,6 +512,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/178964986-85efcf34-c0cc-4f05-bc39-741e746d735c.png)
 
 *********************************************************************************************************************
+skimage
 
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
