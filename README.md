@@ -495,3 +495,60 @@ plt.show()<br>
 ***OUTPUT***<br>
 ![image](https://user-images.githubusercontent.com/97940064/178709499-97bd1796-f623-44ee-a9e2-e11965c53134.png)
 
+
+import cv2<br>
+import numpy as np
+img  = cv2.imread('n3.jpg',0)
+hist = cv2.calcHist([img],[0],None,[256],[0,256])
+plt.hist(img.ravel(),256,[0,256])
+plt.show()
+
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178964876-0957cf4e-da88-4a3c-8589-fe7aaac82f46.png)
+
+
+
+import numpy as np
+import cv2 as cv
+from matplotlib import pyplot as plt
+img = cv.imread('n3.jpg')
+plt.imshow(img)
+plt.show()
+img = cv.imread('n3.jpg',0)
+plt.hist(img.ravel(),256,[0,256]);
+plt.show()
+
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178964986-85efcf34-c0cc-4f05-bc39-741e746d735c.png)
+
+
+
+from skimage import io
+import matplotlib.pyplot as plt
+img = io.imread('n3.jpg')
+plt.imshow(img)
+plt.show()
+image = io.imread('n3.jpg')
+ax = plt.hist(image.ravel(), bins = 256)
+plt.show()
+
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178965106-ab58db9d-accc-4392-9d78-d795f5b28d7a.png)
+
+
+
+
+from skimage import io
+import matplotlib.pyplot as plt
+image = io.imread('n3.jpg')
+_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )
+_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)
+_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)
+_ = plt.xlabel('Intensity Value')
+_ = plt.ylabel('Count')
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])
+plt.show()
+
+***OUTPUT***<br>
+![image](https://user-images.githubusercontent.com/97940064/178965185-e5ab0418-1eab-4786-a672-92cd255e432d.png)
