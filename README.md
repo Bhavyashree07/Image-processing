@@ -628,3 +628,49 @@ plt.axis('off');<br>
 
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/179951442-72d376bf-aa8a-4b99-9071-0274fcbef7df.png)
+
+
+
+***Program to perform basic image manipulation:***<br>
+a) Sharpness<br>
+b) Flipping<br>
+c) Cropping<br>
+
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+my_image=Image.open('lion.jpg')<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+sharp.save('D:/lion_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179965825-8a9b07e7-851e-405a-8912-4c00ed0d4114.png)
+
+import matplotlib.pyplot as plt<br>
+img=Image.open('lion.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+flip.save('D:/lion_sharpen.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179965985-f2c9e196-427b-4e82-9378-a58d3fd1efbe.png)
+
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('lion.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br>
+width,height=im.size<br>
+im1=im.crop((750,200,1600,800))<br>
+#im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179966115-8e1248f8-c989-40ec-9a70-8864a5b8a064.png)
