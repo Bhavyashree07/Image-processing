@@ -617,14 +617,14 @@ plt.axis('off');<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/179951215-fa34b4f7-dcfb-4382-91d8-918f975945e7.png)
 
-import imageio
-import matplotlib.pyplot as plt
-pic=imageio.imread('btrfly1.jpg')
-gamma=2.2
-gamma_correction=((pic/255)**(1/gamma))
-plt.figure(figsize=(5,5))
-plt.imshow(gamma_correction)
-plt.axis('off');
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('btrfly1.jpg')<br>
+gamma=2.2<br>
+gamma_correction=((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
 
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/179951442-72d376bf-aa8a-4b99-9071-0274fcbef7df.png)
