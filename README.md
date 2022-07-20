@@ -590,3 +590,41 @@ plt.axis('off');<br>
 
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/179950252-e75f9250-6eba-45a6-9770-f83f7ff10fd3.png)
+
+
+negative=255-pic<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179950631-61a8759f-0faa-49ef-8618-5915631217de.png)
+
+%matplotlib inline<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('btrfly1.jpg')<br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+max_=np.max(gray)<br>
+def log_transform():<br>
+    return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179951215-fa34b4f7-dcfb-4382-91d8-918f975945e7.png)
+
+import imageio
+import matplotlib.pyplot as plt
+pic=imageio.imread('btrfly1.jpg')
+gamma=2.2
+gamma_correction=((pic/255)**(1/gamma))
+plt.figure(figsize=(5,5))
+plt.imshow(gamma_correction)
+plt.axis('off');
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179951442-72d376bf-aa8a-4b99-9071-0274fcbef7df.png)
