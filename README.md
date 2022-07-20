@@ -673,4 +673,5 @@ plt.imshow(im1)<br>
 plt.show()<br>
 
 **OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/97940064/179966115-8e1248f8-c989-40ec-9a70-8864a5b8a064.png)
+![image](https://user-images.githubusercontent.com/97940064/179966792-4a7920d4-abff-46e3-8b52-8807f68f3f5e.png)
+
