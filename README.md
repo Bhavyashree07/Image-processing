@@ -569,3 +569,24 @@ plt.show()<br>
 
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/178966391-420c8d62-a122-45e8-b9ab-1cc668d9da6c.png)
+
+
+
+***Program to perform basic image data analysis using intensity transformation:***<br>
+a) Image negative<br>
+b) Log transformation<br>
+c) Gamma correction<br>
+
+%matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('btrfly1.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/97940064/179950252-e75f9250-6eba-45a6-9770-f83f7ff10fd3.png)
