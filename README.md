@@ -689,3 +689,23 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/179966792-4a7920d4-abff-46e3-8b52-8807f68f3f5e.png)
 
+
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+w, h = 512,512<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:100, 0:100] = [155, 75, 200] <br>
+data[100:200,100:200] = [100,200,210] <br>
+data[200:300,200:300 ] = [155, 75, 200] <br>
+data[300:400,300:400] = [100,200,210] <br>
+data[400:500, 400:500] = [155, 75, 200] <br>
+# red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+#img.save('my.png')<br>
+#img.show()<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/180202476-9cc8cd5c-137e-4dc1-a54a-4f130dd16ea2.png)
