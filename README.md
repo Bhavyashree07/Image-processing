@@ -700,7 +700,7 @@ data[100:200,100:200] = [100,200,210] <br>
 data[200:300,200:300 ] = [155, 75, 200] <br>
 data[300:400,300:400] = [100,200,210] <br>
 data[400:500, 400:500] = [155, 75, 200] <br>
-# red patch in upper left<br>
+#red patch in upper left<br>
 img = Image.fromarray(data, 'RGB')<br>
 #img.save('my.png')<br>
 #img.show()<br>
