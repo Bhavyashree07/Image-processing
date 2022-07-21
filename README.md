@@ -1,5 +1,5 @@
 # Image-processing
-1. #Develop a program to display grayscae image using read and write operations<br>
+# 1. Develop a program to display grayscae image using read and write operations<br>
 import cv2<br>
 img=cv2.imread('b1.jpg',0)<br>
 cv2.imshow('image',img)<br>
@@ -11,7 +11,7 @@ c2.destroyAllwindows()<br>
 
 ******************************************************************************************************************
 
-2. Develop a program to display the image using matplotlib<br>
+# 2. Develop a program to display the image using matplotlib<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
 img=mpimg.imread('b1.jpg')<br>
@@ -22,7 +22,7 @@ plt.imshow(img)<br>
 
 *****************************************************************************************************************
 
-3.Develop a program to perform linear transformation -Rotation<br>
+# 3.Develop a program to perform linear transformation -Rotation<br>
 from PIL import Image<br>
 img=Image.open("b1.jpg")<br>
 img=img.rotate(180)<br>
@@ -35,7 +35,7 @@ cv2.destroyAllWindows()<br>
 
 ****************************************************************************************************************
 
-4.Develop a program to convert color strings to RGB color values<br>
+# 4.Develop a program to convert color strings to RGB color values<br>
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
@@ -48,7 +48,7 @@ print(img2)<br>
 
 *******************************************************************************************************************
 
-5.Write a program to create image using colors from PI import Image<br>
+# 5.Write a program to create image using colors from PI import Image<br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,255,0))<br>
 img.show()<br>
@@ -58,7 +58,7 @@ img.show()<br>
 
 ********************************************************************************************************************
 
-6.Develop a program to visualize the image using various colorspaces<br>
+# 6.Develop a program to visualize the image using various colorspaces<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 import numpy as np<br>
@@ -78,7 +78,7 @@ plt.show()<br>
 ******************************************************************************************************************
 
 
-7.Write a program to display the image attributes from PIL import Image<br>
+# 7.Write a program to display the image attributes from PIL import Image<br>
 image=Image.open('b1.jpg')<br>
 print("Fiename:",image.filename)<br>
 print("Format:",image.format)<br>
@@ -98,7 +98,7 @@ Height: 1036<br>
 
 ************************************************************************************************************************
 
-8.Convert the original image to Gray scale and then to Binary<br>
+# 8.Convert the original image to Gray scale and then to Binary<br>
 import cv2<br>
 img=cv2.imread('f1.jpg')<br>
 cv2.imshow("RGB",img)<br>
@@ -120,7 +120,7 @@ cv2.destroyAllWindows()<br>
 
 ************************************************************************************************************************                 
 
-9.Resize the original image<br>
+# 9.Resize the original image<br>
 import cv2<br>
 img=cv2.imread('p1.jpg')<br>
 print('original image lenght width',img.shape)<br>
