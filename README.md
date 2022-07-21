@@ -1,5 +1,5 @@
 # Image-processing
-1. Develop a program to display grayscae image using read and write operations<br>
+1. #Develop a program to display grayscae image using read and write operations<br>
 import cv2<br>
 img=cv2.imread('b1.jpg',0)<br>
 cv2.imshow('image',img)<br>
