@@ -209,7 +209,7 @@ plt.show()<br>
 
 
 
-***3.Write a program to perform arithmatic operations on images***<br>
+# 3.Write a program to perform arithmatic operations on images<br>
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
@@ -247,7 +247,7 @@ cv2.imwrite('output.jpg',fimg4)<br>
 
  
 
-***4.Develop the program to change the image to different color space***<br>
+# 4.Develop the program to change the image to different color space<br>
 import cv2 <br>
 img=cv2.imread('E:\\b3.jpg')<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
@@ -272,7 +272,7 @@ cv2.destroyAllWindows()<br>
 
 
 
-***5.Program to create an image using 2D array***<br>
+# 5.Program to create an image using 2D array<br>
 import cv2 as c<br>
 import numpy as np<br>
 from PIL import Image<br>
@@ -289,7 +289,7 @@ c.waitKey(0)<br>
 
 
 
-***6.Bitwise Operation(with two diff images)***<br>
+# 6.Bitwise Operation(with two diff images)<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
@@ -315,7 +315,7 @@ cv2.waitKey(0)<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/97940064/176404531-a617d1c6-abbe-4f3d-a639-16620754c1f2.png)
 
-***7.Bitwise Operation(with two same images)***<br>
+# 7.Bitwise Operation(with two same images)<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image1=cv2.imread('f3.jpg')<br>
@@ -342,7 +342,7 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940064/176406214-981e8df6-3f65-4c02-8aed-a04b1ef8506f.png)
 
 
-***8.Blurring***<br>
+# 8.Blurring<br>
 import cv2<br>
 import numpy as np<br>
 image=cv2.imread('B2.jpg')<br>
@@ -367,7 +367,7 @@ cv2.destroyAllWindows()<br>
 
 ************************************************************************************************************************
 
-***9.Image Enhancement***<br>
+# 9.Image Enhancement<br>
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
 image=Image.open('B2.jpg')<br>
@@ -400,7 +400,7 @@ output<br>
 
 ********************************************************************************************************************
 
-***10.Morphology***<br>
+# 10.Morphology<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -429,7 +429,7 @@ cv2.waitKey(0)<br>
 ![image](https://user-images.githubusercontent.com/97940064/176426010-f94f156c-fb2a-495e-9067-a51bceb3a5b0.png)
 
 
-***11.Original and Grayscale Image***<br>
+# 11.Original and Grayscale Image<br>
 import cv2<br>
 OriginalImg=cv2.imread('img1.jpg')<br>
 GrayImg=cv2.imread('img1.jpg',0)<br>
@@ -449,7 +449,7 @@ if isSaved:<br>
 
 
 
-***12.Graylevel slicing with background***<br>
+# 12.Graylevel slicing with background<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -473,7 +473,7 @@ plt.show()<br>
 
 
 
- ***13.Graylevel slicing without background***<br>
+ # 13.Graylevel slicing without background<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -495,7 +495,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/97940064/178709499-97bd1796-f623-44ee-a9e2-e11965c53134.png)
 
 
-***Analyse the image data using HISTOGRAM(numpy)****<br>
+# 14.Analyse the image data using HISTOGRAM(numpy)<br>
 
 import numpy as np<br>
 import cv2 as cv<br>
@@ -572,7 +572,7 @@ plt.show()<br>
 
 
 
-***Program to perform basic image data analysis using intensity transformation:***<br>
+# 15.Program to perform basic image data analysis using intensity transformation:<br>
 a) Image negative<br>
 b) Log transformation<br>
 c) Gamma correction<br>
@@ -631,7 +631,7 @@ plt.axis('off');<br>
 
 
 
-***Program to perform basic image manipulation:***<br>
+# 16.Program to perform basic image manipulation:<br>
 a) Sharpness<br>
 b) Flipping<br>
 c) Cropping<br>
