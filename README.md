@@ -687,7 +687,21 @@ plt.imshow(im1)<br>
 plt.show()<br>
 
 **OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/97940064/179966792-4a7920d4-abff-46e3-8b52-8807f68f3f5e.png)
+![image](https://user-images.githubusercontent.com/97940064/179966792-4a7920d4-abff-46e3-8b52-8807f68f3f5e.png)\
+
+
+from PIL import Image<br>
+import numpy as np<br>
+w, h =512,512<br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:256, 0:256] = [255, 0, 0] # red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.png')<br>
+img.show()<br>
+
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/180201907-3bd87968-3eef-44bb-9725-7aae35007223.png)
+
 
 
 from PIL import Image<br>
