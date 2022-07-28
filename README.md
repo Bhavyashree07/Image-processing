@@ -138,7 +138,7 @@ original image lenght width (800, 1280, 3)
 
 *****************************************************************************************************************
 
-***1.Develop a program to read image using URL***<br>
+# 1.Develop a program to read image using URL<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://www.teahub.io/photos/full/41-417562_goldfish-fish-facts-wallpapers-pictures-download-gold-fish.jpg'<br>
@@ -149,7 +149,7 @@ plt.show()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/175004957-89831e2c-4554-4ecd-8a4b-568037d2240b.png)
 
-***2.Write a program to mask and blur the image***<br>
+# 2.Write a program to mask and blur the image<br>
 import cv2<br>
 import matplotlib.image as mpimg<br>
 import matplotlib.pyplot as plt<br>
