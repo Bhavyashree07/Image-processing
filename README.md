@@ -206,6 +206,12 @@ plt.show()<br>
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/97940064/175015972-6ddafcaa-562d-4ecd-98fb-b97054aed6f9.png)
 
+***********************************************************************************************************************************************************************
+NEW IMAGE<br>
+![image](https://user-images.githubusercontent.com/97940064/183877009-f73923a3-b30b-492b-9241-7ca31528d206.png)
+![image](https://user-images.githubusercontent.com/97940064/183877197-6abcf7bf-b883-453d-8adf-316d8b28d52b.png)
+![image](https://user-images.githubusercontent.com/97940064/183877420-ea47b173-e4e9-4cb6-8b39-b50693040617.png)
+
 
 
 
