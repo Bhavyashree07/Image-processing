@@ -757,3 +757,30 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940064/186404304-2b675250-84fe-401a-af44-df99f4b36d63.png)<br>
 ![image](https://user-images.githubusercontent.com/97940064/186404365-c857eb56-ca32-42e3-a21f-e0e96a2612c2.png)<br>
 
+
+USING PILLOW FUNCTIONS<br>
+
+from PIL import Image, ImageChops, ImageFilter<br>
+from matplotlib import pyplot as plt<br>
+#Create a PIL Image objects<br>
+x = Image.open("x.png")<br>
+o = Image.open("o.png")<br>
+#Find out attributes of Image Objects<br>
+print('size of the image: ', x.size, ' colour mode:', x.mode)<br>
+print('size of the image: ', o.size, ' colour mode:', o.mode)<br>
+#plot 2 images one besides the other<br>
+plt.subplot(121), plt.imshow(x)<br>
+plt.axis('off')<br>
+plt.subplot(122), plt.imshow(o)<br>
+plt.axis('off')<br>
+#multiply images<br><br>
+merged = ImageChops.multiply(x,o)<br>
+#adding 2 images<br>
+add = ImageChops.add(x,o)<br>
+#convert colour mode<br>
+greyscale = merged.convert('L')<br>
+greyscale<br>
+
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/186653501-d4e1a714-a124-400a-911d-96a34efff4fe.png)
+
