@@ -788,45 +788,45 @@ OUTPUT<br>
 
 #More Attributes<br>
 image = merged<br>
-print('image size: ', image.size,<br>
-     '\ncolor mode:', image.mode,<br>
+print('image size: ', image.size,
+     '\ncolor mode:', image.mode,
      '\nimage width :',image.width, '| also represented by:', image.size[0],<br>
 '\nimage height:',image.height, '| also represented by: ', image.size[1],)<br>
 ![image](https://user-images.githubusercontent.com/97940064/187879920-fad9ce62-1b5b-4fa8-94a2-2203ad2c99bb.png)
 
-#mapping the pixels of the image so we can use them as coordinates
-pixel = greyscale.load()
+#mapping the pixels of the image so we can use them as coordinates<br><br><br><br><br>
+pixel = greyscale.load()<br><br><br><br>
 
-#a nested Loop to parse through all the pixels in the image
-for row in range(greyscale.size[0]):
- for column in range(greyscale.size[1]):
-    if pixel[row, column] != (255): 
-     pixel[row, column] = (0)
-greyscale
-![image](https://user-images.githubusercontent.com/97940064/187880140-adcb83ec-c563-4b1e-8ec0-954e76d6d9b3.png)
+#a nested Loop to parse through all the pixels in the image<br><br><br><br>
+for row in range(greyscale.size[0]):<br><br><br><br>
+ for column in range(greyscale.size[1]):<br><br><br><br>
+    if pixel[row, column] != (255): <br><br><br><br>
+     pixel[row, column] = (0)<br><br><br><br>
+greyscale<br><br><br>
+![image](https://user-images.githubusercontent.com/97940064/187880140-adcb83ec-c563-4b1e-8ec0-954e76d6d9b3.png)<br><br><br>
 
-#1. invert image
-invert = ImageChops.invert(greyscale)
-#2. invert by subtraction
-bg = Image.new('L', (256, 256), color=(255)) #create a new image with a solid white background 
-subt = ImageChops.subtract(bg, greyscale) #subtract image from background
-#3. rotate
-rotate = subt.rotate(45)
-rotate
-![image](https://user-images.githubusercontent.com/97940064/187880272-a0897a24-1941-4828-be63-6f6ffe9b2dda.png)
+#1. invert image<br><br><br>
+invert = ImageChops.invert(greyscale)<br><br><br>
+#2. invert by subtraction<br><br><br>
+bg = Image.new('L', (256, 256), color=(255)) #create a new image with a solid white background <br><br><br>
+subt = ImageChops.subtract(bg, greyscale) #subtract image from background<br><br><br>
+#3. rotate<br><br><br>
+rotate = subt.rotate(45)<br><br>
+rotate<br><br>
+![image](https://user-images.githubusercontent.com/97940064/187880272-a0897a24-1941-4828-be63-6f6ffe9b2dda.png)<br><br>
 
-#gaussian blur
-blur = greyscale.filter(ImageFilter.GaussianBlur(radius=1))
-#edge detection
-edge = blur.filter(ImageFilter.FIND_EDGES)
-edge
-![image](https://user-images.githubusercontent.com/97940064/187880394-1e2914a4-6c43-40f4-a0be-4fcc75ce5995.png)
+#gaussian blur<br><br>
+blur = greyscale.filter(ImageFilter.GaussianBlur(radius=1))<br><br>
+#edge detection<br><br>
+edge = blur.filter(ImageFilter.FIND_EDGES)<br><br>
+edge<br><br>
+![image](https://user-images.githubusercontent.com/97940064/187880394-1e2914a4-6c43-40f4-a0be-4fcc75ce5995.png)<br><br>
 
-#change edge colours
-edge = edge.convert('RGB')
-bg_red = Image.new('RGB', (256,256), color = (255,0,0))
-filled_edge = ImageChops.darker(bg_red, edge) 
-filled_edge
-![image](https://user-images.githubusercontent.com/97940064/187880487-bb68263a-ecb5-437e-9eba-1e7b3b0dfb9b.png)
+#change edge colours<br><br>
+edge = edge.convert('RGB')<br><br>
+bg_red = Image.new('RGB', (256,256), color = (255,0,0))<br>
+filled_edge = ImageChops.darker(bg_red, edge) <br>
+filled_edge<br>
+![image](https://user-images.githubusercontent.com/97940064/187880487-bb68263a-ecb5-437e-9eba-1e7b3b0dfb9b.png)<br>
 
 
