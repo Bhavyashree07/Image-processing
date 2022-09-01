@@ -842,9 +842,9 @@ plt.show()
 mask = cv2.imread('cat_mask.png', 0)
 plt.imshow(mask)
 plt.show()
-# Inpaint.
+#Inpaint.
 dst = cv2.inpaint (img, mask, 3, cv2.INPAINT_TELEA)
-# write the output.
+#write the output.
 cv2.imwrite('dimage_inpainted.png', dst)
 plt.imshow(dst)
 plt.show()
@@ -897,7 +897,7 @@ OUTPUT<br>
 
 from skimage.restoration import denoise_tv_chambolle<br>
 noisy_image = plt.imread('noisy.jpg')<br>
-# Apply total variation filter denoising<br> 
+#Apply total variation filter denoising<br> 
 denoised_image = denoise_tv_chambolle (noisy_image, multichannel=True)<br>
 #Show the noisy and denoised image <br>
 plot_comparison (noisy_image, denoised_image, 'Denoised Image')<br>
@@ -971,7 +971,7 @@ max_dots_shape = 50<br>
 dots_contours = [cnt for cnt in contours if np.shape(cnt)[0] < max_dots_shape]<br>
 #Shows all contours found <br>
 show_image_contour (binary, contours)<br>
-# Print the dice's number<br>
+#Print the dice's number<br>
 print('Dices dots number: {}.'.format(len (dots_contours)))<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187885724-75fa6006-125d-4519-9e58-24f918d74a0c.png)<br>
