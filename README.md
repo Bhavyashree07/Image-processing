@@ -977,3 +977,124 @@ OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187885724-75fa6006-125d-4519-9e58-24f918d74a0c.png)<br>
 
 
+Implement a program to perform various edge detection techniques<br>
+a) Canny Edge detection<br>
+#Canny Edge detection<br>
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+plt.style.use('seaborn')<br>
+loaded_image = cv2.imread("Image.png")<br>
+loaded_image = cv2.cvtColor(loaded_image,cv2.COLOR_BGR2RGB)<br>
+gray_image = cv2.cvtColor(loaded_image, cv2.COLOR_BGR2GRAY)<br>
+edged_image = cv2.Canny(gray_image, threshold1=30, threshold2=100)<br>
+plt.figure(figsize=(20,20))<br>
+plt.subplot(1,3,1)<br>
+plt.imshow(loaded_image, cmap="gray")<br>
+plt.title("Original Image")<br>
+plt.axis("off")<br>
+plt.subplot(1,3,2)<br>
+plt.imshow(gray_image, cmap="gray")<br>
+plt.axis("off")<br>
+plt.title("GrayScale Image")<br>
+plt.subplot(1,3,3)<br>
+plt.imshow(edged_image,cmap="gray")<br>
+plt.axis("off")<br>
+plt.title("Canny Edge Detected Image")<br>
+plt.show()<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187892757-a69fe5cc-25c3-440a-b3cb-52e142050039.png)
+
+b) Edge detection schemes - the gradient (Sobel - first order derivatives)
+based edge detector and the Laplacian (2nd order derivative, so it is
+extremely sensitive to noise) based edge detector.<br>
+#Laplacian and Sobel Edge detecting methods
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+# Loading image
+#img0 = cv2.imread('SanFrancisco.jpg',) 
+img0= cv2.imread('Image.png',)
+#converting to gray scale
+gray = cv2.cvtColor(img0, cv2.COLOR_BGR2GRAY)
+# remove noise
+img= cv2.GaussianBlur (gray, (3,3),0)
+#convolute with proper kernels
+laplacian= cv2.Laplacian (img, cv2.CV_64F) 
+sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5) # x 
+sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5) #y
+plt.subplot(2,2,1), plt.imshow(img, cmap = 'gray')
+plt.title('Original'), plt.xticks([]), plt.yticks([])
+plt.subplot(2,2,2), plt.imshow(laplacian,cmap = 'gray')
+plt.title('Laplacian'), plt.xticks([]), plt.yticks([])
+plt.subplot(2,2,3), plt.imshow(sobelx, cmap = 'gray')
+plt.title('Sobel x'), plt.xticks([]), plt.yticks([])
+plt.subplot(2,2,4), plt.imshow(sobely,cmap = 'gray') 
+plt.title('Sobel Y'), plt.xticks([]), plt.yticks([])
+plt.show()
+OUTPUT
+![image](https://user-images.githubusercontent.com/97940064/187892929-e65c9ce1-9c28-49a6-a9a5-1b63657f04a7.png)
+
+c) Edge detection using Prewitt Operator<br>
+#Edge detection using Prewitt operator
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+img= cv2.imread('Image.png')
+gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  
+img_gaussian = cv2.GaussianBlur (gray, (3,3),0)
+#prewitt
+kernelx = np.array([[1,1,1],[0,0,0],[-1,-1,-1]])
+kernely = np.array([[-1,0,1],[-1,0,1],[-1,0,1]]) 
+img_prewittx= cv2.filter2D(img_gaussian, -1, kernelx)
+img_prewitty = cv2.filter2D(img_gaussian, -1, kernely)
+cv2.imshow("Original Image", img)
+cv2.imshow("Prewitt x", img_prewittx)
+cv2.imshow("Prewitt y", img_prewitty)
+cv2.imshow("Prewitt", img_prewittx + img_prewitty)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+![image](https://user-images.githubusercontent.com/97940064/187896462-50e18889-b068-4064-8fad-1ea4f2947fc6.png)
+![image](https://user-images.githubusercontent.com/97940064/187896521-d4cd5080-6567-4ed2-803e-303a15615196.png)
+![image](https://user-images.githubusercontent.com/97940064/187896717-a0ff38d8-ce11-4fea-9652-51b2bfbbf37b.png)
+![image](https://user-images.githubusercontent.com/97940064/187896769-87085efc-28b5-4db8-a096-d0321c554b35.png)
+
+
+#Roberts Edge Detection- Roberts cross operator
+import cv2
+import numpy as np
+from scipy import ndimage
+from matplotlib import pyplot as plt 
+roberts_cross_v = np.array([[1,0],
+                            [0,-1]])
+roberts_cross_h = np.array([[0, 1],
+                            [-1,0]])
+img = cv2.imread("Image.png",0).astype('float64')
+img/=255.0
+vertical = ndimage.convolve(img, roberts_cross_v ) 
+horizontal = ndimage.convolve( img, roberts_cross_h)
+edged_img = np.sqrt( np.square (horizontal) + np.square(vertical))
+edged_img*=255
+cv2.imwrite("output.jpg",edged_img)
+cv2.imshow("OutputImage", edged_img)
+cv2.waitKey()
+cv2.destroyAllwindows()
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
