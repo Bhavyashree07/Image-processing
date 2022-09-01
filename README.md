@@ -885,3 +885,95 @@ image_logo_removed = inpaint.inpaint_biharmonic (image_with_logo,mask, multichan
 plot_comparison (image_with_logo, image_logo_removed, 'Image with logo removed')<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187883483-41c0d565-aeea-46e9-9b73-7d0a8487cc0a.png)<br>
+
+from skimage.util import random_noise<br>
+fruit_image = plt.imread('fruitts.jpeg')<br>
+#Add noise to the image<br>
+noisy_image = random_noise (fruit_image)<br>
+#Show th original and resulting image<br>
+plot_comparison (fruit_image, noisy_image, 'Noisy image')<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187884110-71a8b196-bfc2-4c62-a82f-09d5c5d27bff.png)<br>
+
+from skimage.restoration import denoise_tv_chambolle<br>
+noisy_image = plt.imread('noisy.jpg')<br>
+# Apply total variation filter denoising<br> 
+denoised_image = denoise_tv_chambolle (noisy_image, multichannel=True)<br>
+#Show the noisy and denoised image <br>
+plot_comparison (noisy_image, denoised_image, 'Denoised Image')<br>
+![image](https://user-images.githubusercontent.com/97940064/187884948-1c1e0ade-edbc-4dc1-b12b-2fd36f0d8d42.png)<br>
+
+
+from skimage.restoration import denoise_bilateral<br>
+landscape_image = plt.imread('noisy.jpg')<br>
+#Apply bilateral filter denoising <br>
+denoised_image = denoise_bilateral (landscape_image, multichannel=True)<br>
+#Show original and resulting images<br>
+plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187885233-e25f09df-3c7b-43ab-984e-8920bde2fa3b.png)<br>
+
+from skimage.segmentation import slic<br>
+from skimage.color import label2rgb<br>
+face_image=plt.imread('face.jpg')<br>
+
+#obtain the segmentation with 400 regions<br>
+segments = slic(face_image, n_segments=400)<br>
+
+#Put segments on top of original image to compare<br>
+segmented_image = label2rgb(segments, face_image,kind='avg')<br>
+
+#Show the segmented image<br>
+plot_comparison (face_image, segmented_image, 'Segmented image, 400 superpixels')<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187885347-49c10cc7-b31b-4c49-8c25-7b548389d947.png)<br>
+
+def show_image_contour (image, contours):<br>
+    plt.figure()<br>
+    for n, contour in enumerate(contours):<br>
+        plt.plot(contour[:, 1], contour[:, 0], linewidth=3)<br>
+    plt.imshow(image, interpolation='nearest', cmap='gray_r')<br>
+    plt.title('Contours')<br>
+    plt.axis('off')<br>
+    
+ from skimage import measure, data<br>
+#Obtain the horse image <br>
+horse_image = data.horse()<br>
+#Find the contours with a constant Level value of 0.8 <br>
+contours = measure.find_contours (horse_image, level=0.8)<br>
+#Shows the image with contours found <br>
+show_image_contour (horse_image, contours)<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187885493-09e2b787-3653-403d-9380-0093b188bcc5.png)<br>
+
+from skimage.io import imread<br>
+from skimage.filters import threshold_otsu<br>
+image_dices = imread('diceimg.png')<br>
+#Make the image grayscale<br>
+image_dices = color.rgb2gray(image_dices)<br>
+#obtain the optimal thresh value<br>
+thresh = threshold_otsu(image_dices)<br>
+#Apply thresholding <br>
+binary = image_dices > thresh<br>
+#Find contours at a constant value of 0.8<br>
+contours = measure.find_contours (binary, level=0.8)<br>
+#Show the image<br>
+show_image_contour (image_dices, contours)<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187885600-0e78dd17-4e2f-428e-9f50-5665ad3f3925.png)<br>
+
+
+#Create List with the shape of each contour<br>
+shape_contours = [cnt.shape[0] for cnt in contours]<br>
+#Set 50 as the maximum size of the dots shape<br>
+max_dots_shape = 50<br>
+#Count dots in contours excluding bigger than dots size<br>
+dots_contours = [cnt for cnt in contours if np.shape(cnt)[0] < max_dots_shape]<br>
+#Shows all contours found <br>
+show_image_contour (binary, contours)<br>
+# Print the dice's number<br>
+print('Dices dots number: {}.'.format(len (dots_contours)))<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187885724-75fa6006-125d-4519-9e58-24f918d74a0c.png)<br>
+
+
