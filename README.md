@@ -782,5 +782,7 @@ greyscale = merged.convert('L')<br>
 greyscale<br>
 
 OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187871854-67490187-07d7-4499-aec6-2e020d0d1a06.png)
+
 ![image](https://user-images.githubusercontent.com/97940064/186653501-d4e1a714-a124-400a-911d-96a34efff4fe.png)
 
