@@ -786,3 +786,10 @@ OUTPUT<br>
 
 ![image](https://user-images.githubusercontent.com/97940064/186653501-d4e1a714-a124-400a-911d-96a34efff4fe.png)
 
+#More Attributes<br>
+image = merged<br>
+print('image size: ', image.size,<br>
+     '\ncolor mode:', image.mode,<br>
+     '\nimage width :',image.width, '| also represented by:', image.size[0],<br>
+'\nimage height:',image.height, '| also represented by: ', image.size[1],)<br>
+
