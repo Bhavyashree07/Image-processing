@@ -773,7 +773,7 @@ plt.subplot(121), plt.imshow(x)<br>
 plt.axis('off')<br>
 plt.subplot(122), plt.imshow(o)<br>
 plt.axis('off')<br>
-#multiply images<br><br>
+#multiply images<br>
 merged = ImageChops.multiply(x,o)<br>
 #adding 2 images<br>
 add = ImageChops.add(x,o)<br>
