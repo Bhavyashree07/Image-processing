@@ -918,21 +918,21 @@ plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187885233-e25f09df-3c7b-43ab-984e-8920bde2fa3b.png)<br>
 
-# 3)Segmentation
-# (a)Superpixel segmentation
-from skimage.segmentation import slic
-from skimage.color import label2rgb
-import matplotlib.pyplot as plt
-import numpy as np
-face_image = plt.imread('face.jpg')
-segments = slic(face_image, n_segments=400)
-segmented_image=label2rgb(segments,face_image,kind='avg')
-plt.imshow(face_image)
-plt.show()
-plt.imshow((segmented_image * 1).astype(np.uint8))
-plt.show()
+# 3)Segmentation<br>
+# (a)Superpixel segmentation<br>
+from skimage.segmentation import slic<br>
+from skimage.color import label2rgb<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+face_image = plt.imread('face.jpg')<br>
+segments = slic(face_image, n_segments=400)<br>
+segmented_image=label2rgb(segments,face_image,kind='avg')<br>
+plt.imshow(face_image)<br>
+plt.show()<br>
+plt.imshow((segmented_image * 1).astype(np.uint8))<br>
+plt.show()<br>
 OUTPUT<br>
-![image](https://user-images.githubusercontent.com/97940064/187898607-8a9a8418-d9b3-4d37-a5f0-3b279f59db80.png)
+![image](https://user-images.githubusercontent.com/97940064/187898607-8a9a8418-d9b3-4d37-a5f0-3b279f59db80.png)<br>
 
 
 def show_image_contour (image, contours):<br>
@@ -1068,19 +1068,19 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/97940064/187896769-87085efc-28b5-4db8-a096-d0321c554b35.png)
 
 
-#Roberts Edge Detection- Roberts cross operator<br><br>
-import cv2<br><br>
-import numpy as np<br><br>
-from scipy import ndimage<br><br>
-from matplotlib import pyplot as plt <br><br>
-roberts_cross_v = np.array([[1,0],<br><br>
-                            [0,-1]])<br><br>
-roberts_cross_h = np.array([[0, 1],<br><br>
-                            [-1,0]])<br><br>
-img = cv2.imread("Image.png",0).astype('float64')<br><br>
-img/=255.0<br><br>
-vertical = ndimage.convolve(img, roberts_cross_v ) <br><br>
-horizontal = ndimage.convolve( img, roberts_cross_h)<br><br>
+#Roberts Edge Detection- Roberts cross operator<br>
+import cv2<br>
+import numpy as np<br>
+from scipy import ndimage<br>
+from matplotlib import pyplot as plt <br>
+roberts_cross_v = np.array([[1,0],<br>
+                            [0,-1]])<br>
+roberts_cross_h = np.array([[0, 1],<br>
+                            [-1,0]])<br>
+img = cv2.imread("Image.png",0).astype('float64')<br>
+img/=255.0<br>
+vertical = ndimage.convolve(img, roberts_cross_v ) <br>
+horizontal = ndimage.convolve( img, roberts_cross_h)<br>
 edged_img = np.sqrt( np.square (horizontal) + np.square(vertical))<br>
 edged_img*=255<br>
 cv2.imwrite("output.jpg",edged_img)<br>
