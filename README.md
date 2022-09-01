@@ -722,29 +722,29 @@ OUTPUT<br>
 
 EDGE DETECTION:<br>
    import cv2<br>
-# Read the original image<br>
+#Read the original image<br>
 img = cv2.imread('B1.jpg')<br>
-# Display original image<br>
+#Display original image<br>
 cv2.imshow('Original', img)<br>
 cv2.waitKey(0)<br>
-# Convert to graycsale<br>
+#Convert to graycsale<br>
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
-# Blur the image for better edge detection<br>
+#Blur the image for better edge detection<br>
 img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
-# Sobel Edge Detection<br>
+#Sobel Edge Detection<br>
 sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
 sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br>
 sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br>
-# Display Sobel Edge Detection Images<br>
+#Display Sobel Edge Detection Images<br>
 cv2.imshow('Sobel X', sobelx)<br>
 cv2.waitKey(0)<br>
 cv2.imshow('Sobel Y', sobely)<br>
 cv2.waitKey(0)<br>
 cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br>
 cv2.waitKey(0)<br>
-# Canny Edge Detection<br>
+#Canny Edge Detection<br>
 edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br>
-# Display Canny Edge Detection Image<br>
+#Display Canny Edge Detection Image<br>
 cv2.imshow('Canny Edge Detection', edges)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
@@ -830,7 +830,8 @@ filled_edge<br>
 ![image](https://user-images.githubusercontent.com/97940064/187880487-bb68263a-ecb5-437e-9eba-1e7b3b0dfb9b.png)<br>
 
 
-IMAGE RESTORATION<br>
+# IMAGE RESTORATION<br>
+# (a)Restore a damaged image<br>
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
@@ -852,6 +853,7 @@ plt.show()
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187883101-1648d232-26ec-4d4f-af8d-31063b9ebe9e.png)
 
+# (b)Removing Logos
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 import pandas as pd<br>
@@ -886,6 +888,8 @@ plot_comparison (image_with_logo, image_logo_removed, 'Image with logo removed')
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187883483-41c0d565-aeea-46e9-9b73-7d0a8487cc0a.png)<br>
 
+# 2)Noise
+# (a)Adding noise
 from skimage.util import random_noise<br>
 fruit_image = plt.imread('fruitts.jpeg')<br>
 #Add noise to the image<br>
@@ -895,6 +899,7 @@ plot_comparison (fruit_image, noisy_image, 'Noisy image')<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187884110-71a8b196-bfc2-4c62-a82f-09d5c5d27bff.png)<br>
 
+# (b)Reducing Noise
 from skimage.restoration import denoise_tv_chambolle<br>
 noisy_image = plt.imread('noisy.jpg')<br>
 #Apply total variation filter denoising<br> 
@@ -903,7 +908,7 @@ denoised_image = denoise_tv_chambolle (noisy_image, multichannel=True)<br>
 plot_comparison (noisy_image, denoised_image, 'Denoised Image')<br>
 ![image](https://user-images.githubusercontent.com/97940064/187884948-1c1e0ade-edbc-4dc1-b12b-2fd36f0d8d42.png)<br>
 
-
+# (c)Reducing Noise while Preserving edges
 from skimage.restoration import denoise_bilateral<br>
 landscape_image = plt.imread('noisy.jpg')<br>
 #Apply bilateral filter denoising <br>
@@ -913,20 +918,22 @@ plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
 OUTPUT<br>
 ![image](https://user-images.githubusercontent.com/97940064/187885233-e25f09df-3c7b-43ab-984e-8920bde2fa3b.png)<br>
 
-from skimage.segmentation import slic<br>
-from skimage.color import label2rgb<br>
-face_image=plt.imread('face.jpg')<br>
-
-#obtain the segmentation with 400 regions<br>
-segments = slic(face_image, n_segments=400)<br>
-
-#Put segments on top of original image to compare<br>
-segmented_image = label2rgb(segments, face_image,kind='avg')<br>
-
-#Show the segmented image<br>
-plot_comparison (face_image, segmented_image, 'Segmented image, 400 superpixels')<br>
+# 3)Segmentation
+# (a)Superpixel segmentation
+from skimage.segmentation import slic
+from skimage.color import label2rgb
+import matplotlib.pyplot as plt
+import numpy as np
+face_image = plt.imread('face.jpg')
+segments = slic(face_image, n_segments=400)
+segmented_image=label2rgb(segments,face_image,kind='avg')
+plt.imshow(face_image)
+plt.show()
+plt.imshow((segmented_image * 1).astype(np.uint8))
+plt.show()
 OUTPUT<br>
-![image](https://user-images.githubusercontent.com/97940064/187885347-49c10cc7-b31b-4c49-8c25-7b548389d947.png)<br>
+![image](https://user-images.githubusercontent.com/97940064/187898607-8a9a8418-d9b3-4d37-a5f0-3b279f59db80.png)
+
 
 def show_image_contour (image, contours):<br>
     plt.figure()<br>
@@ -1081,7 +1088,7 @@ cv2.imshow("OutputImage", edged_img)<br>
 cv2.waitKey()<br>
 cv2.destroyAllwindows()<br>
 
-
+OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/97940064/187897398-89881186-6918-4caf-849d-63712e99b3ab.png)<br>
 
 
