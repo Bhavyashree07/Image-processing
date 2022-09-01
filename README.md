@@ -830,3 +830,58 @@ filled_edge<br>
 ![image](https://user-images.githubusercontent.com/97940064/187880487-bb68263a-ecb5-437e-9eba-1e7b3b0dfb9b.png)<br>
 
 
+IMAGE RESTORATION<br>
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+#Open the image.
+img = cv2.imread('cat_damaged.png')
+plt.imshow(img)
+plt.show()
+#Load the mask.
+mask = cv2.imread('cat_mask.png', 0)
+plt.imshow(mask)
+plt.show()
+# Inpaint.
+dst = cv2.inpaint (img, mask, 3, cv2.INPAINT_TELEA)
+# write the output.
+cv2.imwrite('dimage_inpainted.png', dst)
+plt.imshow(dst)
+plt.show()
+
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187883101-1648d232-26ec-4d4f-af8d-31063b9ebe9e.png)
+
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+import pandas as pd<br>
+plt.rcParams['figure.figsize'] = (10, 8)<br>
+
+def show_image (image, title='Image', cmap_type='gray'):<br>
+        plt.imshow(image, cmap=cmap_type)<br>
+        plt.title(title)<br>
+        plt.axis('off')<br>
+def plot_comparison(img_original, img_filtered, img_title_filtered):<br>
+    fig, (ax1, ax2)= plt.subplots (ncols=2, figsize=(10, 8), sharex=True, sharey=True)<br>
+    ax1.imshow(img_original, cmap=plt.cm.gray)<br>
+    ax1.set_title('Original')<br>
+    ax1.axis('off')<br>
+    ax2.imshow(img_filtered, cmap=plt.cm.gray)<br>
+    ax2.set_title(img_title_filtered)<br>
+    ax2.axis('off')<br>
+    
+from skimage.restoration import inpaint <br>
+from skimage.transform import resize <br>
+from skimage import color<br>
+
+image_with_logo= plt.imread('imglogo.png')<br>
+#Initialize the mask<br>
+mask= np.zeros(image_with_logo.shape[:-1])<br>
+#Set the pixels where the Logo is to 1 <br>
+mask [210:272, 360:425] = 1<br>
+#Apply inpainting to remove the Logo<br>
+image_logo_removed = inpaint.inpaint_biharmonic (image_with_logo,mask, multichannel=True)<br>
+#Show the original and Logo removed images<br>
+plot_comparison (image_with_logo, image_logo_removed, 'Image with logo removed')<br>
+OUTPUT<br>
+![image](https://user-images.githubusercontent.com/97940064/187883483-41c0d565-aeea-46e9-9b73-7d0a8487cc0a.png)<br>
